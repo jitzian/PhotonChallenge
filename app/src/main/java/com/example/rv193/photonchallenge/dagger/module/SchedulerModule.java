@@ -1,7 +1,7 @@
 package com.example.rv193.photonchallenge.dagger.module;
 
-import com.example.rv193.photonlowestpath.dagger.BaseSchedulerProvider;
-import com.example.rv193.photonlowestpath.dagger.SchedulerProvider;
+import com.example.rv193.photonchallenge.dagger.BaseSchedulerProvider;
+import com.example.rv193.photonchallenge.dagger.SchedulerProvider;
 
 import javax.inject.Singleton;
 

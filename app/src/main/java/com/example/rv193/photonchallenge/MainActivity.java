@@ -1,8 +1,10 @@
 package com.example.rv193.photonchallenge;
 
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+
+import com.example.rv193.photonchallenge.ui.minimumcost.MinimumCostFragment;
 
 import javax.inject.Inject;
 

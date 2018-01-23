@@ -1,10 +1,9 @@
 package com.example.rv193.photonchallenge;
 
-
 import android.app.Activity;
 import android.app.Application;
 
-import com.example.rv193.photonlowestpath.dagger.component.DaggerAppComponent;
+import com.example.rv193.photonchallenge.dagger.component.DaggerAppComponent;
 
 import javax.inject.Inject;
 

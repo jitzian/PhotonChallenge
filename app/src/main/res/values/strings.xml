@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">PhotonChallenge</string>
+    <string name="app_name">PhotonLowestPath</string>
+
+    <!-- Generic -->
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <!-- Minimum Cost Fragment -->
+    <string name="minimum_cost_calculate_title">Calculate Minimum Cost Path</string>
+    <string name="minimum_cost_results_title">Results</string>
+    <string name="minimum_cost_grid_contents_default">Grid Contents</string>
+    <string name="mimimum_cost_hint">add matrix with spaces between each entry and enter to add a row. Remember to add at least 5 columns and no more than 10 columns</string>
+    <string name="minimum_cost_grid_is_valid">Grid is valid</string>
+    <string name="minimum_cost_grid_is_not_valid">Grid is not valid</string>
+
+    <!-- Errors -->
+    <string name="error_invalid_matrix">Invalid Matrix</string>
 </resources>

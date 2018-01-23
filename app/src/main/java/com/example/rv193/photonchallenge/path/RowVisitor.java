@@ -1,6 +1,7 @@
 package com.example.rv193.photonchallenge.path;
 
-import com.example.rv193.photonlowestpath.worker.Grid;
+
+import com.example.rv193.photonchallenge.worker.Grid;
 
 import java.util.Iterator;
 import java.util.List;

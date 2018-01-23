@@ -1,6 +1,6 @@
 package com.example.rv193.photonchallenge.dagger.module;
 
-import com.example.rv193.photonlowestpath.MainActivity;
+import com.example.rv193.photonchallenge.MainActivity;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;

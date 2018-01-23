@@ -1,0 +1,92 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_orange_light"
+    tools:context="com.example.rv193.photonlowestpath.ui.minimumcost.MinimumCostFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_large"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/custom_grid_contents"
+                android:layout_width="fill_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="@dimen/margin_large"
+                android:background="@android:color/white"
+                android:hint="@string/mimimum_cost_hint"
+                android:maxLines="10"
+                android:minLines="1"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/buttonfindmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/margin_large"
+                android:enabled="false"
+                android:text="@string/minimum_cost_calculate_title"/>
+
+            <TextView
+                android:id="@+id/grid_contents"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:color/holo_green_light"
+                android:fontFamily="monospace"
+                android:padding="@dimen/margin_default"
+                android:text="@string/minimum_cost_grid_contents_default"/>
+
+            <TextView
+                android:id="@+id/results_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:text="@string/minimum_cost_results_title"/>
+
+            <TextView
+                android:id="@+id/results_success"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_default"
+                android:fontFamily="monospace"/>
+
+            <TextView
+                android:id="@+id/results_total_cost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="monospace"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/results_path_taken"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="monospace"
+                android:textAlignment="center"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+</FrameLayout>

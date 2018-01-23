@@ -1,6 +1,9 @@
 package com.example.rv193.photonchallenge.ui.mimimumcost;
 
-import com.example.rv193.photonlowestpath.dagger.ImmediateSchedulerProvider;
+
+import com.example.rv193.photonchallenge.dagger.ImmediateSchedulerProvider;
+import com.example.rv193.photonchallenge.ui.minimumcost.MinimumCostInterface;
+import com.example.rv193.photonchallenge.ui.minimumcost.MinimumCostPresenter;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -15,7 +18,8 @@ import static junit.framework.Assert.assertTrue;
 
 public class MinimumCostPresenterTest {
 
-    @Mock MinimumCostInterface.View view;
+    @Mock
+    MinimumCostInterface.View view;
     private static final int[][] TEMP = new int[][]{{5,8,5,3,5}};
     private static final String CORRECT = "5 8 5 3 5";
     private static final String INCORRECT = "5 4 H\n8 M 7\n5 7 5";
@@ -35,6 +39,7 @@ public class MinimumCostPresenterTest {
         final TestObserver<int[][]> testObserver = new TestObserver<>();
         presenter.convertStringToGrid(CORRECT)
                 .subscribe(testObserver);
+        testObserver.awaitTerminalEvent();
         testObserver.assertSubscribed();
         testObserver.assertComplete();
     }

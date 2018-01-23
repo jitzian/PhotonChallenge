@@ -1,8 +1,8 @@
 package com.example.rv193.photonchallenge.dagger.module;
 
-import com.example.rv193.photonlowestpath.ui.minimumcost.MinimumCostFragment;
-import com.example.rv193.photonlowestpath.ui.minimumcost.MinimumCostInterface;
-import com.example.rv193.photonlowestpath.ui.minimumcost.MinimumCostPresenter;
+import com.example.rv193.photonchallenge.ui.minimumcost.MinimumCostFragment;
+import com.example.rv193.photonchallenge.ui.minimumcost.MinimumCostInterface;
+import com.example.rv193.photonchallenge.ui.minimumcost.MinimumCostPresenter;
 
 import dagger.Binds;
 import dagger.Module;
