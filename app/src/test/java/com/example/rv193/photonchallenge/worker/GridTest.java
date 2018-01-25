@@ -1,6 +1,5 @@
 package com.example.rv193.photonchallenge.worker;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
@@ -23,9 +22,14 @@ public class GridTest {
     @Mock
     Grid grid;
 
+    private static final String CORRECT = "5    8   5   3   5";
+    private static final String DELIMITER = "\t";
+
     @Before
     public void setupGridTest(){
         MockitoAnnotations.initMocks(this);
+
+        grid = new Grid(TEMP);
     }
 
     @Test
