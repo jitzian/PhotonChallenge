@@ -21,6 +21,7 @@ import dagger.android.support.AndroidSupportInjectionModule;
         MainActivityModule.class,
         MinimumCostModule.class,
         SchedulerModule.class})
+
 public interface AppComponent {
 
     void inject(LowestPathApplication lowestPathApplication);

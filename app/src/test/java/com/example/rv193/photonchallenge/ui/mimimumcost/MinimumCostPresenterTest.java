@@ -4,6 +4,7 @@ package com.example.rv193.photonchallenge.ui.mimimumcost;
 import com.example.rv193.photonchallenge.dagger.ImmediateSchedulerProvider;
 import com.example.rv193.photonchallenge.ui.minimumcost.MinimumCostInterface;
 import com.example.rv193.photonchallenge.ui.minimumcost.MinimumCostPresenter;
+import com.example.rv193.photonchallenge.worker.Grid;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -23,6 +24,7 @@ public class MinimumCostPresenterTest {
     private static final int[][] TEMP = new int[][]{{5,8,5,3,5}};
     private static final String CORRECT = "5 8 5 3 5";
     private static final String INCORRECT = "5 4 H\n8 M 7\n5 7 5";
+
     private final ImmediateSchedulerProvider schedulerProvider = new ImmediateSchedulerProvider();
     private MinimumCostPresenter presenter;
 
@@ -67,4 +69,11 @@ public class MinimumCostPresenterTest {
     public void getBestPathAndSucceed() {
         assertNotNull(presenter.getTheBestPath(TEMP));
     }
+
+    @Test
+    public void isValidGridGetDelimitedString(){
+
+        assertTrue(presenter.validGridGetDelimitedString(CORRECT), true);
+    }
+
 }
