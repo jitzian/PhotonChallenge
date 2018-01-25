@@ -12,7 +12,6 @@ import dagger.android.DispatchingAndroidInjector;
 import dagger.android.HasActivityInjector;
 
 public class LowestPathApplication extends Application implements HasActivityInjector {
-
     @Inject
     DispatchingAndroidInjector<Activity> mActivityInjector;
 
