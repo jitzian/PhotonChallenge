@@ -1,40 +1,47 @@
 package com.example.rv193.photonchallenge.worker;
 
-import org.junit.Before;
+        import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
-import org.mockito.internal.matchers.NotNull;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
-import static org.junit.Assert.*;
-
-/**
- * Created by rv193 on 1/25/2018.
- */
 public class GridTest {
 
-    private static final int[][]TEMP = new int[][]{{5,8,5,3,5}};
+    private static final int[][] TEMP = new int[][]{{5, 8, 5, 3, 5}};
 
-    @Mock
-    Grid grid;
-
-    private static final String CORRECT = "5    8   5   3   5";
-    private static final String DELIMITER = "\t";
+    private Grid grid;
 
     @Before
-    public void setupGridTest(){
-        MockitoAnnotations.initMocks(this);
-
+    public void setupGridTest() {
         grid = new Grid(TEMP);
     }
 
     @Test
+    public void checkValidRowNumber() {
+        assertTrue(grid.isValidRowNumber(1));
+    }
+
+    @Test
+    public void falseOnZeroRow() {
+        assertFalse(grid.isValidRowNumber(0));
+    }
+
+    @Test
     public void getValueForRowAndColumn() throws Exception {
-        assertEquals(5, TEMP[(TEMP.length-1)][(TEMP[0].length-1)]);
+        assertEquals(5, TEMP[(TEMP.length - 1)][(TEMP[0].length - 1)]);
+    }
+
+    @Test
+    public void getRowAboveIsLength() {
+        assertEquals(TEMP.length, grid.getRowAbove(1));
+    }
+
+    @Test
+    public void getRowBelowIsLength() {
+        assertEquals(TEMP.length, grid.getRowBelow(5));
     }
 
     @Test
@@ -53,7 +60,7 @@ public class GridTest {
     }
 
     @Test
-    public void getRowsAdjacentToNull()throws Exception{
+    public void getRowsAdjacentToNull() throws Exception {
         assertNotNull(grid.getRowsAdjacentTo(TEMP[0][0]));
     }
 }
